@@ -24,10 +24,11 @@ public class MethodAdd {
             System.out.println("Δώσε δεύτερο αριθμό");
             second = in.nextInt();
 
-            sum2 = add(first, second);
+            //sum2 = add(first, second);
+            sum2 = MethodAdd.add(first, second);
             System.out.println("Το άθροισμα είναι " + sum2);
-        }while(sum2 !=0);
-        System.out.println("Το άθροισμα είναι 0");
+        } while(sum2 !=0);
+        System.out.println("Αντίο");
     }
 
     public static int add(int a, int b){
