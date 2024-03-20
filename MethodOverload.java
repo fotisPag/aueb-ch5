@@ -21,7 +21,7 @@ public class MethodOverload {
         sum3 = add(1, 2, 12);
 
         sum4 = add(1, 2, 12l);
-        
+
         System.out.printf("%d\t%d\t%d\t%d%n", sum1, sum2, sum3, sum4);
 
     }

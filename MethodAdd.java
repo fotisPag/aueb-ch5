@@ -20,7 +20,7 @@ public class MethodAdd {
         do {
             System.out.println("Δώσε πρώτο αριθμό");
             first = in.nextInt();
-
+            
             System.out.println("Δώσε δεύτερο αριθμό");
             second = in.nextInt();
 
