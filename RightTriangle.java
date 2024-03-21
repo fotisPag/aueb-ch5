@@ -28,7 +28,7 @@ public class RightTriangle {
         System.out.printf("%.4f %.4f%n", a*a, (b*b + c*c));
         isRight = (Math.abs(a*a - b*b - c*c) <= EPSILON);
 
-        System.out.printf("Το τρίγωνο είναι ορθογώνιο", (isRight) ? "" : "ΔΕΝ");
+        System.out.printf("Το τρίγωνο %s είναι ορθογώνιο", (isRight) ? "" : "ΔΕΝ");
 
     }
 
