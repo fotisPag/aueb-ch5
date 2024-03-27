@@ -34,34 +34,32 @@ public class Asterakia {
 
     public static void main (String[] args) {
         Scanner in = new Scanner (System.in);
-        int choice,grammes,asteria = 1;
+        int choice, a=1;
 
 
         do {
             menu();
             choice = in.nextInt();
-
-
-            if (choice != 6){
+            if ((choice >= 1) && (choice <= 5)){
                 System.out.println("Δώσε αριθμό για αστεράκια");
-                asteria = in.nextInt();
+                a = in.nextInt();
             }
 
             switch (choice) {
                 case 1:
-                    prwti();
+                    prwti(a);
                     break;
                 case 2:
-                    deuteri();
+                    deuteri(a);
                     break;
                 case 3:
-                    triti();
+                    triti(a);
                     break;
                 case 4:
-                    tetarti();
+                    tetarti(a);
                     break;
                 case 5:
-                    pempti();
+                    pempti(a);
                     break;
                 case 6:
                     System.out.print("Αντίο");
@@ -70,13 +68,11 @@ public class Asterakia {
                     System.out.println("Παρακαλώ δώστε έναν αριθμό μεταξύ 1 - 6");
                     break;
             }
-
-
-
         } while ( choice != 6);
     }
 
     public static void menu() {
+        System.out.println("\n");
         System.out.println("1.Εμφάνισε n αστεράκια οριζόντια");
         System.out.println("2.Εμφάνισε n αστεράκια κάθετα");
         System.out.println("3.Εμφάνισε n γραμμές με n asterakia");
@@ -86,10 +82,7 @@ public class Asterakia {
         System.out.println("Δώσε επιλογή:");
     }
 
-
-
     public static void prwti(int a) {
-        System.out.println("Δώσε αριθμό για αστεράκια");
         for (int i =1; i<=a; i++){
             System.out.print("*");
         }
@@ -99,20 +92,45 @@ public class Asterakia {
             System.out.println("*");
         }
     }
-    public static void prwti(int grammes, int asteria) {
-        for (int i = 1; i <= grammes; i--) {
-            System.out.println("");
-            for (int j = 1; j <= asteria; j++) {
-                System.out.print("*");
+
+    /*
+    * Εμφανίζει a αστεράκια σε γραμμές και στήλες
+    * καλώντας της prwti()
+    *
+    * @param a το πλήθος των αστεριών
+    * @see #prwti(int)
+    * */
+    public static void triti(int a) {
+        for (int i = 1; i <= a; i++) {
+            prwti(a);
+            System.out.println();
+        }
     }
-    public static void triti(int grammes, int asteria) {
-        for (int i = 10; i <= grammes; i--) {
-            System.out.println("");
-            for (int j = 1; j <= asteria; j++) {
-                System.out.print("*");
+
+    /*
+     * Εμφανίζει a αστεράκια οριζόντια σε αύξουσα σειρά
+     * καλώντας της prwti()
+     *
+     * @param a το πλήθος των αστεριών
+     * @see #prwti(int)
+     * */
+    public static void tetarti(int a){
+            for (int i = 1; i <= a; i++) {
+                prwti(i);
+                System.out.println();
+            }
+        }
+    /*
+     * Εμφανίζει a αστεράκια οριζόντια σε φθίνουσα σειρά
+     * καλώντας της prwti()
+     *
+     * @param a το πλήθος των αστεριών
+     * @see #prwti(int)
+     * */
+    public static void pempti(int a){
+        for (int i = a; i >= 1; i--) {
+            prwti(i);
+            System.out.println();
+        }
     }
-
-
-
-
 }
