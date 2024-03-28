@@ -131,6 +131,7 @@ public class Asterakia {
         for (int i = a; i >= 1; i--) {
             prwti(i);
             System.out.println();
+            
         }
     }
 }
